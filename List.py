@@ -18,9 +18,9 @@ class productlist():
       itemsize = ""
       if type(a) == SmallItem:
           itemsize = "Small"
-      elif MediumItem:
+      elif type(a) == MediumItem:
           itemsize = "Medium"
-      elif LargeItem:
+      elif  type(a) == LargeItem:
           itemsize = "Large"    
       text = text  + str(a.id) +" " + str(a.Name)+" " + str(a.Description) + itemsize + "\n"
     return text
