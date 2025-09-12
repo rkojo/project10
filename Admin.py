@@ -3,6 +3,7 @@ import sys
 from SmallItem import SmallItem
 from MediumItem import MediumItem
 from LargeItem import LargeItem
+from List import productlist
 
 def textout(): ##this is a separate function to enable returning back to this menu
   print("Select 1 to create a product")
@@ -68,7 +69,8 @@ def firstOption():
 def secondOption():
   print("Specials List Creation")
   print("Choose from your Products List")
-  choicelist = MainItems
+  #declared as a productlist to directly copy mainitems object. 
+  choicelist: productlist = MainItems
   bl = True
   while bl == True and choicelist:
     print(choicelist)
@@ -77,7 +79,7 @@ def secondOption():
       bl = False
       textout()
     try:
-      SpecialsList.add(choicelist.pop(a-1)) 
+      SpecialsList.add(choicelist.remove((choicelist.findIndex(a)))) 
     except:
       print("Error - Please Try Again or press 0 to quit ")
   textout()

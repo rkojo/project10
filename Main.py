@@ -8,7 +8,7 @@ def main():
 # without the need for loops at the start. 
 def start():
     try:
-      firstinput = int(input("Press 1 for User, 2 for admin "))
+      firstinput = int(input("Press 1 for admin, 2 for user "))
     except:
         print("Not a number")
         print("Please Try Again")
