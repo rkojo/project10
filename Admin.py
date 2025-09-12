@@ -1,3 +1,4 @@
+import copy
 from Objects import MainItems, SpecialsList
 import sys
 from SmallItem import SmallItem
@@ -70,7 +71,7 @@ def secondOption():
   print("Specials List Creation")
   print("Choose from your Products List")
   #declared as a productlist to directly copy mainitems object. 
-  choicelist: productlist = MainItems
+  choicelist: productlist = copy.deepcopy(MainItems)
   bl = True
   while bl == True and choicelist:
     print(choicelist)

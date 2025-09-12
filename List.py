@@ -5,15 +5,15 @@ from LargeItem import LargeItem
 class productlist():
   _list = []
   def __init__(self):
-    self._list = []
+    self.__list = []
 
   def __str__(self):
     text = ""
     #no product
-    if len(self._list) == 0:
+    if len(self.__list) == 0:
        return "No product on this list"
     #loops all of list
-    for a in self._list:
+    for a in self.__list:
       itemsize = ""
       #check the class as this determines the type 
       if type(a) == SmallItem:
@@ -26,31 +26,31 @@ class productlist():
     return text
 
   def print(self):
-     print(self._list)
+     print(self.__list)
 
   def add(self, product):
-    self._list.append(product)
+    self.__list.append(product)
   
   def deleteall(self):
-    self._list.clear()
+    self.__list.clear()
 
   def showsize(self):
-    return len(self._list)
+    return len(self.__list)
   
   def get(self, num):
-    return self._list[num]
+    return self.__list[num]
   
   def remove(self, num):
-     removeditem = self._list.pop(num)
+     removeditem = self.__list.pop(num)
      return removeditem
   
   def findIndex(self, num):
-     for i in range(len(self._list)):
-        if(self._list[i].id == num):
+     for i in range(len(self.__list)):
+        if(self.__list[i].id == num):
            return i
      return None
   
   #for testing purposes - ensures that there is an intem which can happen. 
   def testadd(self):
-     self._list.append(SmallItem(1,"test", "a test item" ))
-     self._list.append(MediumItem(2, "test1", "test item 2"))
+     self.__list.append(SmallItem(1,"test", "a test item" ))
+     self.__list.append(MediumItem(2, "test1", "test item 2"))
