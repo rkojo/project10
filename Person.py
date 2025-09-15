@@ -18,9 +18,9 @@ class Person():
       #check the type which is based on size
       if type(a) == SmallItem:
           itemsize = "Small"
-      elif MediumItem:
+      elif type(a) == MediumItem:
           itemsize = "Medium"
-      elif LargeItem:
+      elif type(a) == LargeItem:
           itemsize = "Large"   
           #add to text and have it as a new line 
       text = text  + str(a.id) +" " + str(a.Name)+" " + str(a.Description) + itemsize + "\n"
