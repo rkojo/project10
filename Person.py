@@ -1,4 +1,3 @@
-file = open("textfile.txt","w+")
 from SmallItem import SmallItem
 from MediumItem import MediumItem
 from LargeItem import LargeItem
